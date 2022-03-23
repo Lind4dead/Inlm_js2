@@ -1,0 +1,202 @@
+{
+  "product": [
+    {
+      "id": "1",
+      "name": "ASUS Radeon RX 6900 XT TUF OC",
+      "price": 14490,
+      "desc": "Vi presenterar AMD Radeon RX 6000-seriens grafikkort med den banbrytande AMD RDNA 2-arkitekturen, konstruerad för att leverera en kraftfull prestanda till alla spelare. AMD Radeon RX 6000-serien -grafikkortet driver en ny generation av konkurrenskraftiga och 4K-spel, med livliga bilder och uppgraderade upplevelser i varje spel och varje bildfrekvens. Få den ultimata spelupplevelsen med kraftfulla nya beräkningsenheter, banbrytande AMD Infinity Cache och upp till 16GB dedikerat GDDR6-minne. Och i kombination med en stationär processor från AMD Ryzen 5000-serien, erbjuder AMD Smart Access Memory-tekniken nya nivåer av spelprestanda.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1176558.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/2000/1176558.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "2",
+      "name": "XFX Radeon RX 6700 XT Speedster QICK 319",
+      "price": 8299,
+      "desc": "Den helt nya XFX Speedster-serien med 6700 XT-grafikkort samlar 20 års erfarenhet och ledarskap inom GPU:er. Tillsammans med den helt nya AMD Radeon RX 6000-serien av RDNA2 GPU:er gör denna utan tvekan den bästa XFX-serien någonsin i både termisk design och prestanda. XFX Mercury-kortserien är designad för entusiaster, Quicksilver för vanliga spelare och Swift för tillfälliga spelare.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1184990.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1785/1184990.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "3",
+      "name": "ZOTAC GeForce RTX 3050 Twin Edge OC",
+      "price": 4199,
+      "desc": "Grafikkort, PCI Express 4.0, 8GB GDDR6, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1205651.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1788/1179438.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "4",
+      "name": "MSI GeForce RTX 3080 Ti GAMING X TRIO",
+      "price": 20390,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186665.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1000/1186665.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "5",
+      "name": "ZOTAC GeForce RTX 3080 Ti Trinity",
+      "price": 20999,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186872.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1112/1186873.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "6",
+      "name": "ASUS Radeon RX 6900 XT TUF",
+      "price": 14490,
+      "desc": "Vi presenterar AMD Radeon RX 6000-seriens grafikkort med den banbrytande AMD RDNA 2-arkitekturen, konstruerad för att leverera en kraftfull prestanda till alla spelare. AMD Radeon RX 6000-serien -grafikkortet driver en ny generation av konkurrenskraftiga och 4K-spel, med livliga bilder och uppgraderade upplevelser i varje spel och varje bildfrekvens. Få den ultimata spelupplevelsen med kraftfulla nya beräkningsenheter, banbrytande AMD Infinity Cache och upp till 16GB dedikerat GDDR6-minne. Och i kombination med en stationär processor från AMD Ryzen 5000-serien, erbjuder AMD Smart Access Memory-tekniken nya nivåer av spelprestanda.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1176558.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/2000/1176558.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "7",
+      "name": "XFX Radeon RX 6700 XT Speedster QICK",
+      "price": 8299,
+      "desc": "Den helt nya XFX Speedster-serien med 6700 XT-grafikkort samlar 20 års erfarenhet och ledarskap inom GPU:er. Tillsammans med den helt nya AMD Radeon RX 6000-serien av RDNA2 GPU:er gör denna utan tvekan den bästa XFX-serien någonsin i både termisk design och prestanda. XFX Mercury-kortserien är designad för entusiaster, Quicksilver för vanliga spelare och Swift för tillfälliga spelare.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1184990.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1785/1184990.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "8",
+      "name": "ZOTAC GeForce RTX 3050 Twin Edge",
+      "price": 4199,
+      "desc": "Grafikkort, PCI Express 4.0, 8GB GDDR6, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1205651.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1788/1179438.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "9",
+      "name": "MSI GeForce RTX 3080 Ti GAMING X",
+      "price": 20390,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186665.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1000/1186665.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "10",
+      "name": "ZOTAC GeForce RTX 3080 Ti Trinity",
+      "price": 20999,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186872.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1112/1186873.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },{
+      "id": "11",
+      "name": "ASUS Radeon RX 6900 TUF OC",
+      "price": 14490,
+      "desc": "Vi presenterar AMD Radeon RX 6000-seriens grafikkort med den banbrytande AMD RDNA 2-arkitekturen, konstruerad för att leverera en kraftfull prestanda till alla spelare. AMD Radeon RX 6000-serien -grafikkortet driver en ny generation av konkurrenskraftiga och 4K-spel, med livliga bilder och uppgraderade upplevelser i varje spel och varje bildfrekvens. Få den ultimata spelupplevelsen med kraftfulla nya beräkningsenheter, banbrytande AMD Infinity Cache och upp till 16GB dedikerat GDDR6-minne. Och i kombination med en stationär processor från AMD Ryzen 5000-serien, erbjuder AMD Smart Access Memory-tekniken nya nivåer av spelprestanda.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1176558.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/2000/1176558.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "12",
+      "name": "XFX Radeon RX 6700 Speedster QICK 319",
+      "price": 8299,
+      "desc": "Den helt nya XFX Speedster-serien med 6700 XT-grafikkort samlar 20 års erfarenhet och ledarskap inom GPU:er. Tillsammans med den helt nya AMD Radeon RX 6000-serien av RDNA2 GPU:er gör denna utan tvekan den bästa XFX-serien någonsin i både termisk design och prestanda. XFX Mercury-kortserien är designad för entusiaster, Quicksilver för vanliga spelare och Swift för tillfälliga spelare.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1184990.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1785/1184990.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "13",
+      "name": "ZOTAC GeForce RTX 3050 Edge OC",
+      "price": 4199,
+      "desc": "Grafikkort, PCI Express 4.0, 8GB GDDR6, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1205651.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1788/1179438.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "14",
+      "name": "MSI GeForce RTX 3080 GAMING X TRIO",
+      "price": 20390,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186665.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1000/1186665.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "15",
+      "name": "ZOTAC GeForce RTX 3080 Trinity OC",
+      "price": 20999,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186872.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1112/1186873.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },{
+      "id": "16",
+      "name": "ASUS Radeon RX 690 XT TUF OC",
+      "price": 14490,
+      "desc": "Vi presenterar AMD Radeon RX 6000-seriens grafikkort med den banbrytande AMD RDNA 2-arkitekturen, konstruerad för att leverera en kraftfull prestanda till alla spelare. AMD Radeon RX 6000-serien -grafikkortet driver en ny generation av konkurrenskraftiga och 4K-spel, med livliga bilder och uppgraderade upplevelser i varje spel och varje bildfrekvens. Få den ultimata spelupplevelsen med kraftfulla nya beräkningsenheter, banbrytande AMD Infinity Cache och upp till 16GB dedikerat GDDR6-minne. Och i kombination med en stationär processor från AMD Ryzen 5000-serien, erbjuder AMD Smart Access Memory-tekniken nya nivåer av spelprestanda.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1176558.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/2000/1176558.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "17",
+      "name": "XFX Radeon RX 670 XT Speedster QICK 319",
+      "price": 8299,
+      "desc": "Den helt nya XFX Speedster-serien med 6700 XT-grafikkort samlar 20 års erfarenhet och ledarskap inom GPU:er. Tillsammans med den helt nya AMD Radeon RX 6000-serien av RDNA2 GPU:er gör denna utan tvekan den bästa XFX-serien någonsin i både termisk design och prestanda. XFX Mercury-kortserien är designad för entusiaster, Quicksilver för vanliga spelare och Swift för tillfälliga spelare.",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1184990.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1785/1184990.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "18",
+      "name": "ZOTAC GeForce RTX 305 Twin Edge OC",
+      "price": 4199,
+      "desc": "Grafikkort, PCI Express 4.0, 8GB GDDR6, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1205651.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1788/1179438.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "19",
+      "name": "MSI GeForce RTX 308 Ti GAMING X TRIO",
+      "price": 20390,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186665.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1000/1186665.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    },
+    {
+      "id": "20",
+      "name": "ZOTAC GeForce RTX 308 Ti Trinity OC",
+      "price": 20999,
+      "desc": "Grafikkort, PCI-Express 4.0, 12GB GDDR6X, Ampere",
+      "short": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste aperiam eius minima ratione voluptatum est!",
+      "thumbnail": "https://www.komplett.se/img/p/200/1186872.jpg",
+      "imageUrl": "https://www.komplett.se/img/p/1112/1186873.jpg?view=gallery&orientation=horizontal",
+      "quantity": 1
+    }
+  ]
+}

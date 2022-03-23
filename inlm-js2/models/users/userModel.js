@@ -1,0 +1,123 @@
+const User = require('./userSchema')
+const bcrypt = require('bcryptjs')
+const auth = require('../../authentication/auth')
+
+
+exports.userRegistration = (req, res) => {
+  console.log(req)
+  User.exists({ email: req.body.email }, (err, result) => {
+
+    if(err) {
+      return res.status(400).json({
+        statusCode: 400,
+        status: false,
+        message: 'You made a bad request',
+        err
+      })
+    }
+    if(result) {
+      return res.status(401).json({
+        statusCode: 401,
+        status: false,
+        message: 'User with that email already exists'
+      })
+    }
+
+    
+    bcrypt.genSalt(10, (err, salt) => {
+
+      bcrypt.hash(req.body.password, salt, (err, hash) => {
+
+        User.create({
+          fName: req.body.fName,
+          lName: req.body.lName,
+          email: req.body.email,
+          passwordHash: hash,
+        })
+        .then(data => {
+          res.status(201).json({
+            statusCode: 201,
+            status: true,
+            message: 'User was successfully created',
+            token: auth.generateToken(data),
+            data
+          })
+        })
+        .catch(err => {
+          res.status(500).json({
+            statusCode: 500,
+            status: false,
+            message: 'Failed to create user',
+            err
+          })
+        })
+
+
+    });
+
+    })
+
+  })
+}
+
+
+
+
+exports.loginUser = (req, res) => {
+
+  User.findOne({ email: req.body.email }, (err, user) => {
+
+    if(err) {
+      return res.status(400).json({
+        statusCode: 400,
+        status: false,
+        message: 'You made a bad request'
+      })
+    }
+
+    if(!user) {
+      return res.status(401).json({
+        statusCode: 401,
+        status: false,
+        message: 'Incorrect email or password'
+      })
+    }
+
+    bcrypt.compare(req.body.password, user.passwordHash, (err, result) => {
+
+      if(err) {
+        return res.status(500).json({
+          statusCode: 500,
+          status: false,
+          message: 'Something went wrong when trying to decrypt the password'
+        }) 
+      }
+
+      if(!result) {
+        return res.status(401).json({
+          statusCode: 401,
+          status: false,
+          message: 'Incorrect email or password'
+        })
+      }
+
+      res.status(200).json({
+        statusCode: 200,
+        status: true,
+        message: 'Authentication was successful',
+        token: auth.generateToken(user),
+        user
+      })
+
+
+    })
+
+  })
+
+
+
+
+
+
+
+}
