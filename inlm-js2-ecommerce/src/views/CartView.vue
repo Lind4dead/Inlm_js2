@@ -2,7 +2,13 @@
   <SuccessView v-if="success" />
   <ErrorView @handleError="error = false" v-if="this.error" :title="'You have no items in your cart!'" :body="'Please enter items in your cart before you try to checkout!'" />
 
-  <div class="container d-flex justify-content-center align-items-center flex-column mt-5">
+  <div v-if="cart.length < 1" class="mt-5 d-flex justify-content-center align-items-center flex-column gap-3">
+    <h1>Your cart is Empty</h1>
+    <h2>Start shopping!</h2>
+    <router-link to="/"><button class="btn btn-info">Go to shopping!</button></router-link>
+  </div>
+
+  <div v-else class="container d-flex justify-content-center align-items-center flex-column mt-5">
     <h1 class="mb-4">Your cart</h1>
     <table class="table">
       <thead>
@@ -33,7 +39,7 @@
   </div>
     <div class="text-end mt-4 container">
 
-      <button @click="handlePutOrder()" class="btn btn-info">Checkout</button>
+      <button v-if="cart.length > 0" @click="handlePutOrder()" class="btn btn-info">Checkout</button>
     </div>
 </template>
 

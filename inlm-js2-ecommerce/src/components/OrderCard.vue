@@ -5,7 +5,7 @@
     <tr>
       <th>{{ index + 1}}</th>
       <td><img :src="item.product.imageUrl"></td>
-      <td><h5>{{ item.product.name }}</h5>
+      <td><router-link class="link-style" :to="{ name: 'product', params: { id: item.product._id }}"><h5>{{ item.product.name }}</h5></router-link>
         
       </td>
       <td class="align-middle text-center quantity-group">
@@ -64,6 +64,12 @@ img {
  tr {
    height: 170px;
  }
+  .link-style {
+    color: #000000;
+  }
+  .link-style:hover {
+    text-decoration: underline;
+  }
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {

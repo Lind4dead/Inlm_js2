@@ -50,9 +50,10 @@ export default ({
       try {
         localStorage.removeItem('token')
         commit('SET_USER', null)
+        router.push({ name: 'home' })
       }
       catch {
-        console.log('not logged in')
+        console.log('You are not logged in FYI')
       }
     },
     register: async ({commit}, payload) => {

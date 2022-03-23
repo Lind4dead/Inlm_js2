@@ -5,7 +5,17 @@ import LoginView from '../views/LoginView.vue'
 import CartView from '../views/CartView.vue'
 import MyProfileView from '../views/MyProfileView.vue'
 import AboutView from '../views/AboutView.vue'
+import store from '../store/index'
 
+const requireAuth = (to, from, next) => {
+  let loggedIn = store.getters.loggedIn
+  if(!loggedIn) {
+    next({name: 'login', query: {redirect: to.fullPath}})
+  }
+  else {
+    next()
+  }
+}
 
 const routes = [
   {
@@ -32,7 +42,8 @@ const routes = [
   {
     path: '/profile',
     name: 'profile',
-    component: MyProfileView
+    component: MyProfileView,
+    beforeEnter: requireAuth
   },
   {
     path: '/about',

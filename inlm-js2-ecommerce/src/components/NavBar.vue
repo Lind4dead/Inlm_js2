@@ -145,4 +145,7 @@ export default {
 .cursor {
   cursor: pointer;
 }
+.dropdown-item:hover {
+  background: #ffffff2f;
+}
 </style>
