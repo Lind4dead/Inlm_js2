@@ -6,14 +6,17 @@
         <button @click="$emit('handleError')" type="button" class="btn-close"></button>
       </div>
       <div class="myModal-header text-center">
-        <h5 class="myModal-title">You have no items in your cart!</h5>
+        <h5 class="myModal-title">{{title}}</h5>
       </div>
       <div class="myModal-body mt-3 text-center">
-        <p>Please enter items in your cart before you try to checkout!</p>
+        <p>{{body}}</p>
       </div>
-      <div class="myModal-footer d-flex justify-content-evenly mt-3 pb-3">
+      <div v-if="loggedIn" class="myModal-footer d-flex justify-content-evenly mt-3 pb-3">
         <router-link to="/"><button @click="$emit('handleError')" type="button" class="btn btn-secondary" >Go to Home page</button></router-link>
         <router-link to="/profile"><button @click="$emit('handleError')" type="button" class="btn btn-info">Go to Profile Page</button></router-link>
+      </div>
+      <div v-else class="myModal-footer d-flex justify-content-evenly mt-3 pb-3">
+        <router-link to="/login"><button @click="$emit('handleError')" type="button" class="btn btn-secondary" >Login or register</button></router-link>
       </div>
     </div>
   </div>
@@ -21,11 +24,16 @@
 </template>
 
 <script>
-import {mapActions} from 'vuex'
+import {mapActions, mapGetters} from 'vuex'
 export default {
+  props: ['title', 'body'],
   methods: {
     ...mapActions(['changeSuccess'])
+  },
+  computed: {
+    ...mapGetters(['loggedIn'])
   }
+
 }
 </script>
 

@@ -8,12 +8,20 @@ import users from './modules/users'
 
 export default createStore({
   state: {
+    error: false
   },
   getters: {
+    error: state => state.error
   },
   mutations: {
+    CHANGE_ERROR: (state, error) => {
+      state.error = !error
+    }
   },
   actions: {
+    changeError: ({commit}, error) => {
+      commit('CHANGE_ERROR', error)
+    }
   },
   modules: {
     products,

@@ -1,6 +1,6 @@
 <template>
   <SuccessView v-if="success" />
-  <ErrorView @handleError="error = false" v-if="this.error" />
+  <ErrorView @handleError="error = false" v-if="this.error" :title="'You have no items in your cart!'" :body="'Please enter items in your cart before you try to checkout!'" />
 
   <div class="container d-flex justify-content-center align-items-center flex-column mt-5">
     <h1 class="mb-4">Your cart</h1>

@@ -3,28 +3,70 @@
     <div class="container">
       <div class="left-nav">
         <router-link class="logo" to="/">
-          <i class="fa-brands fa-shopify link"><small class="align-middle d-inline-block px-3"> by DJEmpo</small></i>
+          <i class="fa-brands fa-shopify link"
+            ><small class="align-middle d-inline-block px-3">
+              by DJEmpo</small
+            ></i
+          >
         </router-link>
-          
-        
       </div>
       <div class="navbar-nav">
         <ul class="nav-links gap-3">
-          <li ><router-link class="link" to="/">Home</router-link></li>
-          <li v-if="loggedIn"><div class="dropdown"><a class="dropdown-toggle link hidden-arrow" href="#" role="button" id="dropdownMenuLink" data-mdb-toggle="dropdown" aria-expanded="false"><i class="fa-solid fa-user"></i></a><ul class="dropdown-menu bg-primary border" aria-labelledby="dropdownMenuLink">
-    <li><router-link class="dropdown-item text-light" to="/profile">My Profile</router-link></li>
-    <li  @click="logout" class="dropdown-item text-light cursor">Logout</li>
-  </ul></div></li>
-          
-          
-          <li v-else><router-link class="link" to="/login">Login</router-link></li>
-          <li ><router-link class="link" to="/about">About</router-link></li>
-          <li ><router-link class="link" to="/cart">
-          <i class="fa-solid fa-cart-shopping align-middle"></i>
-          <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-            {{ cartQuantity }}
-          <span class="visually-hidden">unread messages</span>
-  </span></router-link></li>
+          <li><router-link class="link" to="/">Home</router-link></li>
+          <li v-if="loggedIn">
+            <div class="dropdown">
+              <a
+                class="dropdown-toggle link hidden-arrow"
+                href="#"
+                role="button"
+                id="dropdownMenuLink"
+                data-mdb-toggle="dropdown"
+                aria-expanded="false"
+                ><i class="fa-solid fa-user"></i
+              ></a>
+              <ul
+                class="dropdown-menu bg-primary border"
+                aria-labelledby="dropdownMenuLink"
+              >
+                <li>
+                  <router-link class="dropdown-item text-light" to="/profile"
+                    >My Profile</router-link
+                  >
+                </li>
+                <li @click="logout" class="dropdown-item text-light cursor">
+                  Logout
+                </li>
+              </ul>
+            </div>
+          </li>
+
+          <li v-else>
+            <router-link class="link" to="/login">Login</router-link>
+          </li>
+          <li><router-link class="link" to="/about">About</router-link></li>
+        <li><div class="dropdown">
+          <a
+            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            href="#"
+            id="navbarDropdownMenuLink"
+            role="button"
+            data-mdb-toggle="dropdown"
+            aria-expanded="false"
+          >
+            <i class="fas fa-shopping-cart text-light"></i>
+            <span
+              v-if="cartQuantity"
+              class="badge rounded-pill badge-notification bg-danger"
+              >{{ cartQuantity }}</span
+            >
+          </a>
+          <div
+            class="dropdown-menu dropdown-menu-end shopping-cart"
+            aria-labelledby="navbarDropdownMenuLink"
+          >
+            <ShoppingCart />
+          </div>
+        </div></li>
         </ul>
       </div>
     </div>
@@ -32,23 +74,18 @@
 </template>
 
 <script>
-import {mapGetters, mapActions} from 'vuex'
+import ShoppingCart from '../components/ShoppingCart.vue'
+import { mapGetters, mapActions } from "vuex";
 export default {
-  data() {
-    return {
-      showSearch: false,
-      searchProduct: '',
-      
-    }
+  components: {
+    ShoppingCart
   },
   methods: {
-    ...mapActions(['logout'])
+    ...mapActions(["logout"]),
   },
   computed: {
-    ...mapGetters(['cartQuantity', 'loggedIn'])
-  }
-  
-
+    ...mapGetters(["cartQuantity", "loggedIn"]),
+  },
 };
 </script>
 
@@ -67,11 +104,14 @@ export default {
   font-size: 2rem;
 }
 .fa-shopify small {
-  font-size: .8rem;
+  font-size: 0.8rem;
 }
 .fa-cart-shopping {
   font-size: 1.3rem;
 }
+.shopping-cart {
+    min-width: 500px;
+  }
 .nav-links {
   display: flex;
   justify-content: space-between;
@@ -83,7 +123,7 @@ export default {
 .link {
   text-decoration: none;
   display: inline-block;
-  padding: 0 .6em;
+  padding: 0 0.6em;
   color: #f8f8f8;
   position: relative;
 }
@@ -95,16 +135,14 @@ export default {
   color: #ffffffa6;
 }
 .link.router-link-active::after {
-    content: '';
-    border-bottom: 2px solid #abcaf8;
-    position: absolute;
-    left: .7rem;
-    right: .7rem;
-    top: 1.5rem;
-  }
-  .cursor {
-    cursor: pointer;
-  }
-
- 
+  content: "";
+  border-bottom: 2px solid #abcaf8;
+  position: absolute;
+  left: 0.7rem;
+  right: 0.7rem;
+  top: 1.5rem;
+}
+.cursor {
+  cursor: pointer;
+}
 </style>
