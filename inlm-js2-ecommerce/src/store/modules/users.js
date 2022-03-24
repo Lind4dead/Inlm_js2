@@ -31,13 +31,18 @@ export default ({
   },
   actions: {
     login: async ({commit}, payload) => {
-      
-      const res = await axios.post('http://localhost:9999/api/users/login', payload)
+      console.log(payload)
+      const res = await axios.post('http://localhost:9999/api/users/login', payload.user)
       
       if(res.status === 200) {
         localStorage.setItem('token', res.data.token)
         commit('SET_USER', res.data.token)
-        router.push({name: 'home'})
+        if(payload.route) {
+          router.push(payload.route)
+        }
+        else {
+          router.push({name: 'home'})
+        }
       }
     },
     checkUser: ({commit}) => {

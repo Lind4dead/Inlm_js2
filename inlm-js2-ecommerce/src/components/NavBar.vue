@@ -46,7 +46,7 @@
           <li><router-link class="link" to="/about">About</router-link></li>
         <li><div class="dropdown">
           <a
-            class="text-reset me-3 dropdown-toggle hidden-arrow"
+            class="text-reset me-3 dropdown-toggle hidden-arrow position-relative"
             href="#"
             id="navbarDropdownMenuLink"
             role="button"
@@ -61,11 +61,17 @@
             >
           </a>
           <div
-            class="dropdown-menu dropdown-menu-end shopping-cart"
+            class="dropdown-menu dropdown-menu-end shopping-cart "
             aria-labelledby="navbarDropdownMenuLink"
           >
+
             <ShoppingCart />
+            
+              
+                
+              
           </div>
+          <ToCart />
         </div></li>
         </ul>
       </div>
@@ -76,9 +82,11 @@
 <script>
 import ShoppingCart from '../components/ShoppingCart.vue'
 import { mapGetters, mapActions } from "vuex";
+import ToCart from './animation/ToCart.vue';
 export default {
   components: {
-    ShoppingCart
+    ShoppingCart,
+    ToCart
   },
   methods: {
     ...mapActions(["logout"]),

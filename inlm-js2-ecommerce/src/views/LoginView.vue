@@ -67,7 +67,10 @@ export default {
         email: this.email,
         password: this.password
       }
-      this.login(user)
+      console.log(this.$route.query.redirect)
+      let route = this.$route.query.redirect
+
+      this.login({user, route})
     },
     ...mapActions(['login'])
   },
