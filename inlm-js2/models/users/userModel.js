@@ -1,6 +1,7 @@
 const User = require('./userSchema')
 const bcrypt = require('bcryptjs')
 const auth = require('../../authentication/auth')
+const { json } = require('express')
 
 
 exports.userRegistration = (req, res) => {
@@ -114,10 +115,64 @@ exports.loginUser = (req, res) => {
 
   })
 
+}
 
 
 
+exports.updateUser = (req, res) => {
+  
+  User.findById({ _id: req.userData.id }, (err, data) => {
+
+    if(!data.isAdmin) {
+      return res.status(401).json({
+        statusCode: 401,
+        status: false,
+        message: 'Unauthorized! You do not have permission!'
+      })
+    }
+  
+  User.exists({ _id: req.params.id }, (err, result) => {
+    
+
+    if(err) {
+      return res.status(400).json({
+        statusCode: 400,
+        status: false,
+        message: 'You made a bad request',
+        err
+      })
+    }
+
+    if(!result) {
+      return res.status(404).json({
+        statusCode: 404,
+        status: false,
+        message: 'User does not exist',
+        err
+      })
+    }
 
 
+    User.findOneAndUpdate({ _id: req.params.id }, req.body, { new: true }, (err, data) => {
 
+      if(err) {
+        return res.status(500).json({
+          statusCode: 500,
+          status: false,
+          message: 'Failed to update user'
+        })
+      }
+
+      return res.status(200).json({
+        statusCode: 200,
+        status: true,
+        message: 'User updated successfully',
+        data
+      })
+
+    })
+    
+
+  })
+})
 }

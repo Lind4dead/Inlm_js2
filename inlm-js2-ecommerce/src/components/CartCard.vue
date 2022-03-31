@@ -9,9 +9,9 @@
         
       </td>
       <td class="align-middle quantity-group">
-        <button class="btn btn-sm btn-info me-1"  @click="decreaseQuantity(item)"><i class="fa-solid fa-minus"></i></button>
-        <input type="number" :value="item.quantity" class="d-inline-block form-control quantity-input">
-        <button class="btn btn-sm btn-info ms-1" @click="increaseQuantity(item)"><i class="fa-solid fa-plus"></i></button>
+        <button class="btn btn-sm btn-info me-1"  @click="changeQuantity --"><i class="fa-solid fa-minus"></i></button>
+        <input type="number" v-model="changeQuantity"  class="d-inline-block form-control quantity-input">
+        <button class="btn btn-sm btn-info ms-1" @click="increment"><i class="fa-solid fa-plus"></i></button>
         </td>
       <td class="align-middle">
         {{item.product.price}} :-
@@ -36,15 +36,35 @@ export default {
   props: ['item', 'index'],
   data() {
     return {
+      changeQuantity: this.item.quantity
       // quantity: 1
     }
   },
   methods: {
-    ...mapActions(['decreaseQuantity', 'increaseQuantity', 'removeItem']),
+    ...mapActions(['decreaseQuantity', 'increaseQuantity', 'removeItem', 'changeQuantityInCart']),
+    increment() {
+      // this.increaseQuantity(this.item)
+      this.changeQuantity ++
+    }
     
   },
   computed: {
-    ...mapGetters(['cartQuantity'])
+    ...mapGetters(['cartQuantity', 'cart']),
+    quantity() {
+      return this.item.quantity
+    }
+  },
+  watch: {
+    changeQuantity() {
+      
+      let item = this.item
+      let newQuantity = this.changeQuantity
+      
+      console.log(item)
+      console.log(newQuantity)
+      this.changeQuantityInCart({item, newQuantity})
+    },
+    
   }
 };
 </script>

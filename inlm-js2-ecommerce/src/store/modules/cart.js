@@ -50,6 +50,10 @@ export default ({
     INCREASE_QUANTITY: (state, product) => {
         product.quantity += 1
     },
+    CHANGE_QUANTITY: (state, {item, newQuantity}) => {
+      console.log(item, item.quantity)
+      item.quantity = newQuantity
+    },
     REMOVE_ITEM_FROM_CART: (state, product) => {
       state.cart = state.cart.filter(item => item.product._id !== product.product._id)
     },
@@ -75,6 +79,10 @@ export default ({
     },
      increaseQuantity:  ({commit}, product) => {
       commit('INCREASE_QUANTITY', product)
+    },
+    changeQuantityInCart: ({commit}, {item, newQuantity}) => {
+      console.log(newQuantity)
+      commit('CHANGE_QUANTITY', {item, newQuantity})
     },
     removeItem: ({commit}, product) => {
       commit('REMOVE_ITEM_FROM_CART', product)

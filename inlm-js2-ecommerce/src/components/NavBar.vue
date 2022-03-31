@@ -33,6 +33,11 @@
                     >My Profile</router-link
                   >
                 </li>
+                <!-- <li>
+                  <router-link class="dropdown-item text-light" to="/admin"
+                    >Admin</router-link
+                  >
+                </li> -->
                 <li @click="logout" class="dropdown-item text-light cursor">
                   Logout
                 </li>
